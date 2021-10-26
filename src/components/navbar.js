@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
+import "./navbar.css";
 import itsbIcon from "../images/itsb_icon.svg";
 import homeIcon from "../images/home.svg";
 import pageIcon from "../images/page.svg";
@@ -39,44 +40,28 @@ export default function Navbar() {
           <Link to="/">
             {" "}
             <figure className="menu-icon">
-              <img
-                className="logo"
-                src={homeIcon}
-                alt="ITSB Icon: A concentric circle."
-              />
+              <img className="logo" src={homeIcon} alt="A picture of a home." />
             </figure>
             <span className="menu-title">Home</span>
           </Link>
           <Link to="/instructions">
             {" "}
             <figure className="menu-icon">
-              <img
-                className="logo"
-                src={pageIcon}
-                alt="ITSB Icon: A concentric circle."
-              />
+              <img className="logo" src={pageIcon} alt="A circle." />
             </figure>
             <span className="menu-title">Instructions</span>
           </Link>
           <Link to="/trajectories">
             {" "}
             <figure className="menu-icon">
-              <img
-                className="logo"
-                src={vizIcon}
-                alt="ITSB Icon: A concentric circle."
-              />
+              <img className="logo" src={vizIcon} alt="An eye." />
             </figure>
             <span className="menu-title">Trajectories</span>
           </Link>
           <Link to="/intersections">
             {" "}
             <figure className="menu-icon">
-              <img
-                className="logo"
-                src={vizIcon}
-                alt="ITSB Icon: A concentric circle."
-              />
+              <img className="logo" src={vizIcon} alt="An eye." />
             </figure>
             <span className="menu-title">Intersections</span>
           </Link>
@@ -86,7 +71,7 @@ export default function Navbar() {
               <img
                 className="logo"
                 src={searchIcon}
-                alt="ITSB Icon: A concentric circle."
+                alt="A magnifying glass."
               />
             </figure>
             <span className="menu-title">Search</span>
@@ -94,11 +79,7 @@ export default function Navbar() {
           <Link to="/credits">
             {" "}
             <figure className="menu-icon">
-              <img
-                className="logo"
-                src={pageIcon}
-                alt="ITSB Icon: A concentric circle."
-              />
+              <img className="logo" src={pageIcon} alt="A circle." />
             </figure>
             <span className="menu-title">Credits</span>
           </Link>

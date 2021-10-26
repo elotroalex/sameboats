@@ -1,0 +1,11 @@
+.content {
+  width: 75%;
+  padding: 3rem;
+  max-width: 900px;
+  padding-left: 30%;
+}
+
+h1.prose-title {
+  font-size: 4rem;
+  font-weight: 100;
+}
