@@ -1,14 +1,5 @@
 /* Remember to add flex wrap parameters */
 
-nav {
-  width: 25%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  z-index: 100;
-}
-
 /* TITLE */
 
 .title {

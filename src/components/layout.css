@@ -17,6 +17,14 @@ body {
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
 
+nav {
+  width: 25%;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 100;
+}
+
 main {
   margin-left: 25%;
   padding: 4rem 2rem;
