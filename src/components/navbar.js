@@ -11,14 +11,14 @@ import searchIcon from "../images/search.svg";
 const Header = ({ siteTitle }) => (
   <div className="title">
     <Link to="/">
-      <figure className="title-icon">
+      <div>
         <img
-          className="logo"
+          className="title-icon"
           src={itsbIcon}
           alt="ITSB Icon: A concentric circle."
         />
-      </figure>
-      <span className="title-text">{siteTitle}</span>
+        <span className="title-text">{siteTitle}</span>
+      </div>
     </Link>
   </div>
 );
@@ -33,58 +33,60 @@ Header.defaultProps = {
 
 export default function Navbar() {
   return (
-    <div className="navbar">
+    <nav className="navbar" style={{ paddingBottom: "2rem" }}>
       <Header siteTitle="In The Same Boat" />
-      <nav className="navigation" style={{ paddingBottom: "2rem" }}>
-        <div className="main-menu">
-          <Link to="/">
-            {" "}
-            <figure className="menu-icon">
-              <img className="logo" src={homeIcon} alt="A picture of a home." />
-            </figure>
-            <span className="menu-title">Home</span>
-          </Link>
-          <Link to="/instructions">
-            {" "}
-            <figure className="menu-icon">
-              <img className="logo" src={pageIcon} alt="A circle." />
-            </figure>
-            <span className="menu-title">Instructions</span>
-          </Link>
-          <Link to="/trajectories">
-            {" "}
-            <figure className="menu-icon">
-              <img className="logo" src={vizIcon} alt="An eye." />
-            </figure>
-            <span className="menu-title">Trajectories</span>
-          </Link>
-          <Link to="/intersections">
-            {" "}
-            <figure className="menu-icon">
-              <img className="logo" src={vizIcon} alt="An eye." />
-            </figure>
-            <span className="menu-title">Intersections</span>
-          </Link>
-          <Link to="/search">
-            {" "}
-            <figure className="menu-icon">
-              <img
-                className="logo"
-                src={searchIcon}
-                alt="A magnifying glass."
-              />
-            </figure>
-            <span className="menu-title">Search</span>
-          </Link>
-          <Link to="/credits">
-            {" "}
-            <figure className="menu-icon">
-              <img className="logo" src={pageIcon} alt="A circle." />
-            </figure>
-            <span className="menu-title">Credits</span>
-          </Link>
-        </div>
-      </nav>
-    </div>
+      <div className="main-menu">
+        <Link to="/">
+          {" "}
+          <div className="menu-item">
+            <img
+              className="menu-icon"
+              src={homeIcon}
+              alt="A picture of a home."
+            />
+            <span className="menu-text">Home</span>
+          </div>
+        </Link>
+        <Link to="/instructions">
+          {" "}
+          <div className="menu-item">
+            <img className="menu-icon" src={pageIcon} alt="A circle." />
+            <span className="menu-text">Instructions</span>
+          </div>
+        </Link>
+        <Link to="/trajectories">
+          {" "}
+          <div className="menu-item">
+            <img className="menu-icon" src={vizIcon} alt="An eye." />
+            <span className="menu-text">Trajectories</span>
+          </div>
+        </Link>
+        <Link to="/intersections">
+          {" "}
+          <div className="menu-item">
+            <img className="menu-icon" src={vizIcon} alt="An eye." />
+            <span className="menu-text">Intersections</span>
+          </div>
+        </Link>
+        <Link to="/search">
+          {" "}
+          <div className="menu-item">
+            <img
+              className="menu-icon"
+              src={searchIcon}
+              alt="A magnifying glass."
+            />
+            <span className="menu-text">Search</span>
+          </div>
+        </Link>
+        <Link to="/credits">
+          {" "}
+          <div className="menu-item">
+            <img className="menu-icon" src={pageIcon} alt="A circle." />
+            <span className="menu-text">Credits</span>
+          </div>
+        </Link>
+      </div>
+    </nav>
   );
 }
