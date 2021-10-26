@@ -39,11 +39,7 @@ export default function Navbar() {
         <Link to="/">
           {" "}
           <div className="menu-item">
-            <img
-              className="menu-icon"
-              src={homeIcon}
-              alt="A picture of a home."
-            />
+            <img className="menu-icon" src={homeIcon} alt="A home." />
             <span className="menu-text">Home</span>
           </div>
         </Link>

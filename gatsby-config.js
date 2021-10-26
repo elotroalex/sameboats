@@ -1,6 +1,32 @@
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
+    menuLinks: [
+      {
+        name: "Home",
+        link: "/",
+      },
+      {
+        name: "Instructions",
+        link: "/instructions",
+      },
+      {
+        name: "Trajectories",
+        link: "/trajectories",
+      },
+      {
+        name: "Intersections",
+        link: "/intersections",
+      },
+      {
+        name: "Search",
+        link: "/search",
+      },
+      {
+        name: "Credits",
+        link: "/credits",
+      },
+    ],
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
@@ -35,4 +61,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
