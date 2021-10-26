@@ -11,14 +11,14 @@ import searchIcon from "../images/search.svg";
 const Header = ({ siteTitle }) => (
   <div className="title">
     <Link to="/">
-      <figure className="menu-icon">
+      <figure className="title-icon">
         <img
           className="logo"
           src={itsbIcon}
           alt="ITSB Icon: A concentric circle."
         />
       </figure>
-      <span className="menu-title">{siteTitle}</span>
+      <span className="title-text">{siteTitle}</span>
     </Link>
   </div>
 );
