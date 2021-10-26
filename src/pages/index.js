@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Link } from "gatsby";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 
@@ -61,12 +60,6 @@ const IndexPage = () => (
       invitation for our community of scholars to flesh out and enrich the
       scholarly record toward the constitution of an Afro-Atlantic Republic of
       Arts and Letters.
-    </p>
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link> <br />
-      <Link to="/using-ssr">Go to "Using SSR"</Link> <br />
-      <Link to="/using-dsg">Go to "Using DSG"</Link>
     </p>
   </Layout>
 );
