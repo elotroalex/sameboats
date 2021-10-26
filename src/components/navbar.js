@@ -45,7 +45,7 @@ export default function Navbar() {
   `);
 
   return (
-    <nav className="navbar" style={{ paddingBottom: "2rem" }}>
+    <nav className="navbar">
       <Header siteTitle="In The Same Boat" />
       <div className="main-menu">
         {data.site.siteMetadata.menuLinks.map((link) => (
