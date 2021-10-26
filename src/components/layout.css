@@ -20,6 +20,7 @@ body {
 #gatsby-focus-wrapper {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   height: 100vh;
 }
 
@@ -28,7 +29,8 @@ nav {
   left: 0;
   z-index: 100;
   flex-grow: 1;
-  min-width: 25%;
+  max-width: 25%;
+  width: 25%;
 }
 
 main {

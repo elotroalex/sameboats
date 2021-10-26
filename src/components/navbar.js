@@ -12,7 +12,7 @@ const Header = ({ siteTitle }) => (
         <img
           className="title-icon"
           src={itsbIcon}
-          alt="ITSB Icon: A concentric circle."
+          alt="Same Boats Logo: A concentric circle."
         />
         <span className="title-text">{siteTitle}</span>
       </div>
@@ -33,7 +33,6 @@ export default function Navbar() {
     query SiteTitleQuery {
       site {
         siteMetadata {
-          title
           menuLinks {
             name
             link
@@ -58,52 +57,6 @@ export default function Navbar() {
             </div>
           </Link>
         ))}
-        {/* <Link to="/">
-          {" "}
-          <div className="menu-item">
-            <img className="menu-icon" src={homeIcon} alt="A home." />
-            <span className="menu-text">Home</span>
-          </div>
-        </Link>
-        <Link to="/instructions">
-          {" "}
-          <div className="menu-item">
-            <img className="menu-icon" src={pageIcon} alt="A circle." />
-            <span className="menu-text">Instructions</span>
-          </div>
-        </Link>
-        <Link to="/trajectories">
-          {" "}
-          <div className="menu-item">
-            <img className="menu-icon" src={vizIcon} alt="An eye." />
-            <span className="menu-text">Trajectories</span>
-          </div>
-        </Link>
-        <Link to="/intersections">
-          {" "}
-          <div className="menu-item">
-            <img className="menu-icon" src={vizIcon} alt="An eye." />
-            <span className="menu-text">Intersections</span>
-          </div>
-        </Link>
-        <Link to="/search">
-          {" "}
-          <div className="menu-item">
-            <img
-              className="menu-icon"
-              src={searchIcon}
-              alt="A magnifying glass."
-            />
-            <span className="menu-text">Search</span>
-          </div>
-        </Link>
-        <Link to="/credits">
-          {" "}
-          <div className="menu-item">
-            <img className="menu-icon" src={pageIcon} alt="A circle." />
-            <span className="menu-text">Credits</span>
-          </div>
-        </Link> */}
       </div>
     </nav>
   );
