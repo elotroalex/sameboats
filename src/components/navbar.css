@@ -35,11 +35,11 @@
   padding-top: 2rem;
 }
 
-@media only screen and (max-width: 1080px) {
+/* @media only screen and (max-width: 1080px) {
   .main-menu {
     display: none;
   }
-}
+} */
 
 .main-menu a {
   color: white;

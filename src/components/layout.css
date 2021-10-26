@@ -28,21 +28,19 @@ nav {
   top: 0;
   left: 0;
   z-index: 100;
-  flex-grow: 1;
-  max-width: 25%;
-  width: 25%;
+  flex: 1 0 300px;
 }
 
 main {
   padding: 4rem 2rem;
   width: 70%;
-  flex-grow: 5;
+  flex: 3 0 600px;
   overflow: auto;
 }
 
-@media only screen and (max-width: 1080px) {
+/* @media only screen and (max-width: 1080px) {
   nav {
     width: 100%;
     max-width: 100%;
   }
-}
+} */
