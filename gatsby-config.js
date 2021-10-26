@@ -5,26 +5,38 @@ module.exports = {
       {
         name: "Home",
         link: "/",
+        icon: "home.svg",
+        alt: "A home",
       },
       {
         name: "Instructions",
         link: "/instructions",
+        icon: "page.svg",
+        alt: "A page",
       },
       {
         name: "Trajectories",
         link: "/trajectories",
+        icon: "visualization.svg",
+        alt: "An eye",
       },
       {
         name: "Intersections",
         link: "/intersections",
+        icon: "visualization.svg",
+        alt: "An eye",
       },
       {
         name: "Search",
         link: "/search",
+        icon: "search.svg",
+        alt: "A magnifying glass",
       },
       {
         name: "Credits",
         link: "/credits",
+        icon: "page.svg",
+        alt: "A page",
       },
     ],
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,

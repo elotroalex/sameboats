@@ -3,10 +3,7 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import "./navbar.css";
 import itsbIcon from "../images/itsb_icon.svg";
-import homeIcon from "../images/home.svg";
-import pageIcon from "../images/page.svg";
-import vizIcon from "../images/visualization.svg";
-import searchIcon from "../images/search.svg";
+import { useStaticQuery, graphql } from "gatsby";
 
 const Header = ({ siteTitle }) => (
   <div className="title">
@@ -32,11 +29,36 @@ Header.defaultProps = {
 };
 
 export default function Navbar() {
+  const data = useStaticQuery(graphql`
+    query SiteTitleQuery {
+      site {
+        siteMetadata {
+          title
+          menuLinks {
+            name
+            link
+            icon
+            alt
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <nav className="navbar" style={{ paddingBottom: "2rem" }}>
       <Header siteTitle="In The Same Boat" />
       <div className="main-menu">
-        <Link to="/">
+        {data.site.siteMetadata.menuLinks.map((link) => (
+          <Link to={link.link}>
+            {" "}
+            <div className="menu-item">
+              <img className="menu-icon" src={link.icon} alt={link.alt} />
+              <span className="menu-text">{link.name}</span>
+            </div>
+          </Link>
+        ))}
+        {/* <Link to="/">
           {" "}
           <div className="menu-item">
             <img className="menu-icon" src={homeIcon} alt="A home." />
@@ -81,7 +103,7 @@ export default function Navbar() {
             <img className="menu-icon" src={pageIcon} alt="A circle." />
             <span className="menu-text">Credits</span>
           </div>
-        </Link>
+        </Link> */}
       </div>
     </nav>
   );
