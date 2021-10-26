@@ -12,7 +12,7 @@ nav {
 /* TITLE */
 
 .title {
-  height: 60px;
+  height: 4rem;
   background: #fcb040;
 }
 
@@ -27,7 +27,7 @@ nav {
 .title-icon {
   width: 36px;
   float: left;
-  padding: 1rem;
+  padding: 0.8rem 1rem;
 }
 
 .title-text {
