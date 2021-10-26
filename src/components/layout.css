@@ -35,6 +35,14 @@ nav {
 
 main {
   padding: 4rem 2rem;
+  width: 70%;
   flex-grow: 5;
   overflow: auto;
+}
+
+@media only screen and (max-width: 1080px) {
+  nav {
+    width: 100%;
+    max-width: 100%;
+  }
 }
