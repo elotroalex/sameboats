@@ -16,3 +16,9 @@ body {
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
+
+main {
+  margin-left: 25%;
+  padding: 4rem 2rem;
+  max-width: 900px;
+}
