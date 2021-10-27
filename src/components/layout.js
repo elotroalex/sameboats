@@ -7,12 +7,17 @@
 
 import * as React from "react";
 import PropTypes from "prop-types";
+import Helmet from "react-helmet";
 import Navbar from "../components/navbar";
+import { withPrefix } from "gatsby-link";
 import "./layout.css";
 
 const Layout = ({ children }) => {
   return (
     <>
+      <Helmet>
+        <script src={withPrefix("scripts.js")} type="text/javascript" />
+      </Helmet>
       <Navbar />
       <main>{children}</main>
     </>

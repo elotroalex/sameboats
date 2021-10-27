@@ -19,8 +19,7 @@ body {
 
 #gatsby-focus-wrapper {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   height: 100vh;
 }
 
@@ -29,12 +28,13 @@ nav {
   left: 0;
   z-index: 100;
   flex: 1 0 300px;
+  align-items: stretch;
 }
 
 main {
   padding: 4rem 2rem;
   width: 70%;
-  flex: 3 0 600px;
+  flex: 3 1 600px;
   overflow: auto;
 }
 

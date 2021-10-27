@@ -17,6 +17,7 @@ const Header = ({ siteTitle }) => (
         <span className="title-text">{siteTitle}</span>
       </div>
     </Link>
+    <script></script>
   </div>
 );
 
@@ -49,13 +50,13 @@ export default function Navbar() {
       <Header siteTitle="In The Same Boat" />
       <div className="main-menu">
         {data.site.siteMetadata.menuLinks.map((link) => (
-          <Link to={link.link}>
-            {" "}
-            <div className="menu-item">
+          <div key={link.name} className="menu-item">
+            <Link to={link.link}>
+              {" "}
               <img className="menu-icon" src={link.icon} alt={link.alt} />
               <span className="menu-text">{link.name}</span>
-            </div>
-          </Link>
+            </Link>
+          </div>
         ))}
       </div>
     </nav>
