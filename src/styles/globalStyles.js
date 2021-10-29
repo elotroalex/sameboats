@@ -132,4 +132,14 @@ table {
   border-spacing: 0;
 }
 
+h1 {
+  font-size: 2rem;
+  font-weight: 200;
+  padding-bottom: 1rem;
+}
+
+p {
+  padding-bottom: 1rem;
+}
+
 `;

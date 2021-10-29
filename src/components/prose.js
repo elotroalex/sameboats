@@ -1,8 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./prose.css";
+import styled from "styled-components";
 
-const Prose = ({ children }) => <div className="content">{children}</div>;
+const ProseBox = styled.div`
+  max-width: 600px;
+`;
+
+const Prose = ({ children }) => {
+  return <ProseBox className="content">{children}</ProseBox>;
+};
 
 Prose.propTypes = {
   children: PropTypes.node.isRequired,
