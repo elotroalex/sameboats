@@ -1,7 +1,11 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+import { createGlobalStyle } from "styled-components";
+/* RESET CSS
+   http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
+
+export const GlobalStyle = createGlobalStyle`
 
 html,
 body,
@@ -127,3 +131,5 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+`;
