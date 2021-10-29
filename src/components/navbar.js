@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import "./navbar.css";
 import itsbIcon from "../images/itsb_icon.svg";
-import { useStaticQuery, graphql } from "gatsby";
+import { menuData } from "../data/menuData";
 
 const Header = ({ siteTitle }) => (
   <div className="title">
@@ -30,26 +30,11 @@ Header.defaultProps = {
 };
 
 export default function Navbar() {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          menuLinks {
-            name
-            link
-            icon
-            alt
-          }
-        }
-      }
-    }
-  `);
-
   return (
     <nav className="navbar">
       <Header siteTitle="In The Same Boat" />
       <div className="main-menu">
-        {data.site.siteMetadata.menuLinks.map((link) => (
+        {menuData.map((link) => (
           <div key={link.name} className="menu-item">
             <Link to={link.link}>
               {" "}
