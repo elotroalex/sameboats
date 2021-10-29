@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import "./navbar.css";
 import itsbIcon from "../images/itsb_icon.svg";
 import { menuData } from "../data/menuData";
-import styled from "styled-components";
 
 const Header = ({ siteTitle }) => (
   <div className="title">
@@ -48,5 +47,3 @@ export default function Navbar() {
     </nav>
   );
 }
-
-const Header = styled.div``;
