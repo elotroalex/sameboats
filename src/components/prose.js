@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 const ProseBox = styled.div`
   max-width: 600px;
+  padding: 4rem;
 `;
 
 const Prose = ({ children }) => {

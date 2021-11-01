@@ -42,7 +42,7 @@ const Bars = styled(FaBars)`
   cursor: pointer;
 
   @media only screen and (max-width: 963px) {
-    display: flex;
+    display: block;
 `;
 
 function ToggleMainMenu() {
