@@ -58,6 +58,15 @@ const MainMenu = styled.div`
 
   @media only screen and (max-width: 963px) {
     display: none;
+    background: black;
+    flex-flow: column nowrap;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    padding: 3rem;
+    z-index: 100;
   }
 `;
 
@@ -73,6 +82,10 @@ const MenuLink = styled(Link)`
 
 const MenuIcon = styled.img`
   padding-right: 0.33rem;
+
+  @media only screen and (max-width: 963px) {
+    padding-right: 1rem;
+  }
 `;
 
 const MenuText = styled.span`
