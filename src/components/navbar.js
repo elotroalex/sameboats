@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 import { menuData } from "../data/menuData";
 import styled from "styled-components";
 import logo from "../images/itsb_icon.svg";
+import { FaBars } from "react-icons/fa";
 
 // HEADER
 
@@ -19,11 +20,15 @@ const TitleLink = styled(Link)`
   font-weight: 600;
   display: flex;
   flex-flow: row nowrap;
+  align-items: center;
+
+  @media only screen and (max-width: 963px) {
+    justify-content: space-between;
+  }
 `;
 
 const TitleText = styled.span`
   text-transform: uppercase;
-  padding-top: 1.4rem;
 `;
 
 const TitleIcon = styled.img`
@@ -32,11 +37,21 @@ const TitleIcon = styled.img`
   width: 2rem;
 `;
 
+const Bars = styled(FaBars)`
+display: none;
+color: #000;
+padding: 1rem;
+
+@media only screen and (max-width: 963px) {
+  display: flex;
+`;
+
 const Header = () => (
   <Title>
     <TitleLink to="/">
       <TitleIcon src={logo} alt="Same Boats Logo" />
       <TitleText>In The Same Boat</TitleText>
+      <Bars />
     </TitleLink>
   </Title>
 );
