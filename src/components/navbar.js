@@ -7,7 +7,7 @@ import { FaBars } from "react-icons/fa";
 
 // HEADER
 
-const NavBar = styled.nav`
+const Container = styled.header`
   height: 4rem;
   background: #fcb040;
   width: 100%;
@@ -50,7 +50,7 @@ const Bars = styled(FaBars)`
     display: block;
 `;
 
-const MainMenu = styled.div`
+const Nav = styled.nav`
   display: flex;
   flex-flow: row nowrap;
   padding: 1rem;
@@ -70,9 +70,9 @@ const MainMenu = styled.div`
   }
 `;
 
-const MenuItem = styled.div``;
+const NavItem = styled.div``;
 
-const MenuLink = styled(Link)`
+const NavLink = styled(Link)`
   text-decoration: none;
   display: flex;
   flex-flow: row nowrap;
@@ -80,7 +80,7 @@ const MenuLink = styled(Link)`
   padding: 0.5rem;
 `;
 
-const MenuIcon = styled.img`
+const NavItemIcon = styled.img`
   padding-right: 0.33rem;
   display: none;
 
@@ -90,7 +90,7 @@ const MenuIcon = styled.img`
   }
 `;
 
-const MenuText = styled.span`
+const NavItemText = styled.span`
   color: #000;
 
   @media only screen and (max-width: 963px) {
@@ -98,7 +98,7 @@ const MenuText = styled.span`
   }
 `;
 
-function ToggleMainMenu() {
+function ToggleNav() {
   var element = document.getElementById("main-menu");
   if (element.style.display === "none") {
     element.style.display = "block";
@@ -107,25 +107,25 @@ function ToggleMainMenu() {
   }
 }
 
-export default function Navbar() {
+export default function Header() {
   return (
-    <NavBar>
+    <Container>
       <Title>
         <TitleIcon src={logo} alt="Same Boats Logo" />
-        <TitleText>In The Same Boat</TitleText>
+        <TitleText>In The Same Boats</TitleText>
       </Title>
-      <Bars onClick={ToggleMainMenu} />
-      <MainMenu id="main-menu">
+      <Bars onClick={ToggleNav} />
+      <Nav id="main-menu">
         {menuData.map((link) => (
-          <MenuItem key={link.name}>
-            <MenuLink to={link.link}>
+          <NavItem key={link.name}>
+            <NavLink to={link.link}>
               {" "}
-              <MenuIcon src={link.icon} alt={link.alt} />
-              <MenuText>{link.name}</MenuText>
-            </MenuLink>
-          </MenuItem>
+              <NavItemIcon src={link.icon} alt={link.alt} />
+              <NavItemText>{link.name}</NavItemText>
+            </NavLink>
+          </NavItem>
         ))}
-      </MainMenu>
-    </NavBar>
+      </Nav>
+    </Container>
   );
 }

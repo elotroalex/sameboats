@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `In The Same Boats`,
+    description: `A visualization of historical figures of the 20th Century Black Atlantic in space and time`,
     author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: ``,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
