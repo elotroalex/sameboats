@@ -34,7 +34,9 @@ const TitleIcon = styled.img`
   width: 2rem;
 `;
 
-const BarsToggle = styled.div`
+const Bars = styled(FaBars)`
+  color: #000;
+  font-size: 1.4rem;
   display: none;
   padding: 1rem;
   cursor: pointer;
@@ -43,13 +45,7 @@ const BarsToggle = styled.div`
     display: flex;
 `;
 
-const Bars = styled(FaBars)`
-  color: #000;
-  font-size: 1.4rem;
-`;
-
-function Toggle() {
-  console.log("hello!");
+function ToggleMainMenu() {
   var element = document.getElementById("main-menu");
   if (element.style.display === "none") {
     element.style.display = "block";
@@ -62,9 +58,8 @@ const Header = () => (
   <Title>
     <TitleIcon src={logo} alt="Same Boats Logo" />
     <TitleText>In The Same Boat</TitleText>
-    <BarsToggle onClick={Toggle}>
-      <Bars />
-    </BarsToggle>
+
+    <Bars onClick={ToggleMainMenu} />
   </Title>
 );
 
