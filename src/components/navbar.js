@@ -40,7 +40,7 @@ const TitleIcon = styled.img`
 // MAIN MENU
 
 const Bars = styled(FaBars)`
-  color: #fff;
+  color: #000;
   font-size: 1.4rem;
   display: none;
   padding: 1rem;
@@ -82,14 +82,20 @@ const MenuLink = styled(Link)`
 
 const MenuIcon = styled.img`
   padding-right: 0.33rem;
+  display: none;
 
   @media only screen and (max-width: 963px) {
     padding-right: 1rem;
+    display: block;
   }
 `;
 
 const MenuText = styled.span`
-  color: #fff;
+  color: #000;
+
+  @media only screen and (max-width: 963px) {
+    color: #fff;
+  }
 `;
 
 function ToggleMainMenu() {
