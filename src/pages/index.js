@@ -4,23 +4,11 @@ import Seo from "../components/seo";
 import Prose from "../components/prose";
 import styled from "styled-components";
 
-const SecretH1 = styled.h1`
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-`;
-
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
     <Prose>
-      <SecretH1>In the Same Boats</SecretH1>
+      <h1>In the Same Boats</h1>
       <h2>Welcome</h2>
       <p>
         In the Same Boats is a work of multimodal scholarship designed to

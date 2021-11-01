@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const ProseBox = styled.div`
-  max-width: 600px;
+  max-width: 900px;
   padding: 4rem;
 `;
 
