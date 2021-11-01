@@ -7,7 +7,7 @@ import { FaBars } from "react-icons/fa";
 
 // HEADER
 
-const Title = styled.div`
+const NavBar = styled.nav`
   height: 4rem;
   background: #fcb040;
   width: 100%;
@@ -18,10 +18,13 @@ const Title = styled.div`
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+  justify-content: space-between;
+`;
 
-  @media only screen and (max-width: 963px) {
-    justify-content: space-between;
-  }
+const Title = styled.div`
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
 `;
 
 const TitleText = styled.span`
@@ -34,8 +37,10 @@ const TitleIcon = styled.img`
   width: 2rem;
 `;
 
+// MAIN MENU
+
 const Bars = styled(FaBars)`
-  color: #000;
+  color: #fff;
   font-size: 1.4rem;
   display: none;
   padding: 1rem;
@@ -43,6 +48,35 @@ const Bars = styled(FaBars)`
 
   @media only screen and (max-width: 963px) {
     display: block;
+`;
+
+const MainMenu = styled.div`
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 1rem;
+  align-items: center;
+
+  @media only screen and (max-width: 963px) {
+    display: none;
+  }
+`;
+
+const MenuItem = styled.div``;
+
+const MenuLink = styled(Link)`
+  text-decoration: none;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 0.5rem;
+`;
+
+const MenuIcon = styled.img`
+  padding-right: 0.33rem;
+`;
+
+const MenuText = styled.span`
+  color: #fff;
 `;
 
 function ToggleMainMenu() {
@@ -54,58 +88,14 @@ function ToggleMainMenu() {
   }
 }
 
-const Header = () => (
-  <Title>
-    <TitleIcon src={logo} alt="Same Boats Logo" />
-    <TitleText>In The Same Boat</TitleText>
-
-    <Bars onClick={ToggleMainMenu} />
-  </Title>
-);
-
-// NAVBAR
-
-const MainMenu = styled.div`
-  background: black;
-  height: 100%;
-  padding-top: 3rem;
-
-  @media only screen and (max-width: 963px) {
-    display: none;
-  }
-`;
-
-const MenuItem = styled.div`
-  padding-left: 0.4rem;
-  height: 3rem;
-  clear: both;
-`;
-
-const MenuLink = styled(Link)`
-  color: white;
-  text-decoration: none;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-`;
-
-const MenuIcon = styled.img`
-  width: 24px;
-  height: 24px;
-  margin: 0;
-  padding: 0 1rem;
-`;
-
-const MenuText = styled.span`
-  margin: 0;
-  font-size: 1rem;
-  text-transform: uppercase;
-`;
-
 export default function Navbar() {
   return (
-    <nav className="navbar">
-      <Header />
+    <NavBar>
+      <Title>
+        <TitleIcon src={logo} alt="Same Boats Logo" />
+        <TitleText>In The Same Boat</TitleText>
+      </Title>
+      <Bars onClick={ToggleMainMenu} />
       <MainMenu id="main-menu">
         {menuData.map((link) => (
           <MenuItem key={link.name}>
@@ -117,6 +107,6 @@ export default function Navbar() {
           </MenuItem>
         ))}
       </MainMenu>
-    </nav>
+    </NavBar>
   );
 }
