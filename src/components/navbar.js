@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "gatsby";
-import "./navbar.css";
 import { menuData } from "../data/menuData";
 import styled from "styled-components";
 import logo from "../images/itsb_icon.svg";
@@ -44,21 +43,58 @@ const Header = () => (
 
 // NAVBAR
 
+const MainMenu = styled.div`
+  background: black;
+  height: 100%;
+  padding-top: 3rem;
+
+  @media only screen and (max-width: 963px) {
+    display: none;
+  }
+`;
+
+const MenuItem = styled.div`
+  padding-left: 0.4rem;
+  height: 3rem;
+  clear: both;
+`;
+
+const MenuLink = styled(Link)`
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+`;
+
+const MenuIcon = styled.img`
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 0 1rem;
+`;
+
+const MenuText = styled.span`
+  margin: 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+`;
+
 export default function Navbar() {
   return (
     <nav className="navbar">
       <Header />
-      <div className="main-menu">
+      <MainMenu>
         {menuData.map((link) => (
-          <div key={link.name} className="menu-item">
-            <Link to={link.link}>
+          <MenuItem key={link.name}>
+            <MenuLink to={link.link}>
               {" "}
-              <img className="menu-icon" src={link.icon} alt={link.alt} />
-              <span className="menu-text">{link.name}</span>
-            </Link>
-          </div>
+              <MenuIcon src={link.icon} alt={link.alt} />
+              <MenuText>{link.name}</MenuText>
+            </MenuLink>
+          </MenuItem>
         ))}
-      </div>
+      </MainMenu>
     </nav>
   );
 }

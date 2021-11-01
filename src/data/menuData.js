@@ -1,11 +1,5 @@
 export const menuData = [
   {
-    name: "Home",
-    link: "/",
-    icon: "home.svg",
-    alt: "A home",
-  },
-  {
     name: "Instructions",
     link: "/instructions",
     icon: "page.svg",
