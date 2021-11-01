@@ -7,6 +7,8 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 
+/* CSS Reset */
+
 html,
 body,
 div,
@@ -132,6 +134,55 @@ table {
   border-spacing: 0;
 }
 
+/* Global Values */
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: hsla(0, 0%, 0%, 0.8);
+  word-wrap: break-word;
+  font-kerning: normal;
+  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+  font-feature-settings: "kern", "liga", "clig", "calt";
+}
+
+#gatsby-focus-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  height: 100vh;
+}
+
+nav {
+  top: 0;
+  left: 0;
+  z-index: 100;
+  flex: 1 0 300px;
+  align-items: stretch;
+}
+
+main {
+  padding: 4rem 2rem;
+  width: 70%;
+  flex: 3 1 600px;
+  overflow: auto;
+}
+
+@media only screen and (max-width: 963px) {
+  main {
+    padding: 2rem;
+  }
+}
+
 h1 {
   font-size: 2rem;
   font-weight: 200;
@@ -141,5 +192,6 @@ h1 {
 p {
   padding-bottom: 1rem;
 }
+
 
 `;

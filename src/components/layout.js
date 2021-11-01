@@ -4,7 +4,6 @@ import Helmet from "react-helmet";
 import Navbar from "../components/navbar";
 import { withPrefix } from "gatsby-link";
 import { GlobalStyle } from "../styles/globalStyles";
-import "./layout.css";
 
 const Layout = ({ children }) => {
   return (
