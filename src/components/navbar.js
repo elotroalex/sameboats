@@ -10,9 +10,6 @@ import { FaBars } from "react-icons/fa";
 const Title = styled.div`
   height: 4rem;
   background: #fcb040;
-`;
-
-const TitleLink = styled(Link)`
   width: 100%;
   text-decoration: none;
   color: black;
@@ -37,22 +34,37 @@ const TitleIcon = styled.img`
   width: 2rem;
 `;
 
-const Bars = styled(FaBars)`
-display: none;
-color: #000;
-padding: 1rem;
+const BarsToggle = styled.div`
+  display: none;
+  padding: 1rem;
 
-@media only screen and (max-width: 963px) {
-  display: flex;
+  @media only screen and (max-width: 963px) {
+    display: flex;
 `;
+
+const Bars = styled(FaBars)`
+  color: #000;
+  font-size: 1.4rem;
+`;
+
+// function ToggleMenu() {
+//   var element = document.getElementById("main-menu");
+//   if (element.style.display === "none") {
+//     element.style.display = "block";
+//   } else {
+//     element.style.display = "none";
+//   }
+// }
 
 const Header = () => (
   <Title>
-    <TitleLink to="/">
-      <TitleIcon src={logo} alt="Same Boats Logo" />
-      <TitleText>In The Same Boat</TitleText>
+    <TitleIcon src={logo} alt="Same Boats Logo" />
+    <TitleText>In The Same Boat</TitleText>
+
+    {/* Onclick call: onClick={ToggleMenu()} */}
+    <BarsToggle>
       <Bars />
-    </TitleLink>
+    </BarsToggle>
   </Title>
 );
 
@@ -99,7 +111,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <Header />
-      <MainMenu>
+      <MainMenu id="main-menu">
         {menuData.map((link) => (
           <MenuItem key={link.name}>
             <MenuLink to={link.link}>
