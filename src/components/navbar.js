@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "gatsby";
 import { menuData } from "../data/menuData";
 import styled from "styled-components";
@@ -21,10 +21,12 @@ const Container = styled.header`
   justify-content: space-between;
 `;
 
-const Title = styled.div`
+const Title = styled(Link)`
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+  color: #000;
+  text-decoration: none;
 `;
 
 const TitleText = styled.span`
@@ -57,7 +59,7 @@ const Nav = styled.nav`
   align-items: center;
 
   @media only screen and (max-width: 963px) {
-    display: none;
+    display: ${({ nav }) => (nav ? "block" : "none")};
     background: black;
     flex-flow: column nowrap;
     position: absolute;
@@ -98,24 +100,18 @@ const NavItemText = styled.span`
   }
 `;
 
-function ToggleNav() {
-  var element = document.getElementById("main-menu");
-  if (element.style.display === "none") {
-    element.style.display = "block";
-  } else {
-    element.style.display = "none";
-  }
-}
-
 export default function Header() {
+  const [nav, flipNav] = useState(false);
+
   return (
     <Container>
-      <Title>
+      <Title to="/">
         <TitleIcon src={logo} alt="Same Boats Logo" />
         <TitleText>In The Same Boats</TitleText>
       </Title>
-      <Bars onClick={ToggleNav} />
-      <Nav id="main-menu">
+
+      <Bars onClick={() => flipNav(!nav)} nav={nav} />
+      <Nav id="main-menu" nav={nav}>
         {menuData.map((link) => (
           <NavItem key={link.name}>
             <NavLink to={link.link}>
