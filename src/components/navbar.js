@@ -59,7 +59,7 @@ const Nav = styled.nav`
   align-items: center;
 
   @media only screen and (max-width: 963px) {
-    display: ${({ nav }) => (nav ? "block" : "none")};
+    display: ${({ $nav }) => ($nav ? "block" : "none")};
     background: black;
     flex-flow: column nowrap;
     position: absolute;
@@ -110,8 +110,8 @@ export default function Header() {
         <TitleText>In The Same Boats</TitleText>
       </Title>
 
-      <Bars onClick={() => flipNav(!nav)} nav={nav} />
-      <Nav id="main-menu" nav={nav}>
+      <Bars onClick={() => flipNav(!nav)} $nav={nav} />
+      <Nav id="main-menu" $nav={nav}>
         {menuData.map((link) => (
           <NavItem key={link.name}>
             <NavLink to={link.link}>

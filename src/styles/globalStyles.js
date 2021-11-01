@@ -162,6 +162,12 @@ h1 {
   padding-bottom: 1rem;
 }
 
+h2 {
+  font-size: 1.6rem;
+  font-weight: 200;
+  padding-bottom: 1rem;
+}
+
 p {
   padding-bottom: 1rem;
 }
