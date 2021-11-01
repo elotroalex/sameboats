@@ -37,6 +37,7 @@ const TitleIcon = styled.img`
 const BarsToggle = styled.div`
   display: none;
   padding: 1rem;
+  cursor: pointer;
 
   @media only screen and (max-width: 963px) {
     display: flex;
@@ -47,22 +48,21 @@ const Bars = styled(FaBars)`
   font-size: 1.4rem;
 `;
 
-// function ToggleMenu() {
-//   var element = document.getElementById("main-menu");
-//   if (element.style.display === "none") {
-//     element.style.display = "block";
-//   } else {
-//     element.style.display = "none";
-//   }
-// }
+function Toggle() {
+  console.log("hello!");
+  var element = document.getElementById("main-menu");
+  if (element.style.display === "none") {
+    element.style.display = "block";
+  } else {
+    element.style.display = "none";
+  }
+}
 
 const Header = () => (
   <Title>
     <TitleIcon src={logo} alt="Same Boats Logo" />
     <TitleText>In The Same Boat</TitleText>
-
-    {/* Onclick call: onClick={ToggleMenu()} */}
-    <BarsToggle>
+    <BarsToggle onClick={Toggle}>
       <Bars />
     </BarsToggle>
   </Title>
