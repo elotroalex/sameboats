@@ -3,7 +3,7 @@ module.exports = {
     title: `In The Same Boats`,
     description: `A visualization of historical figures of the 20th Century Black Atlantic in space and time`,
     author: `@gatsbyjs`,
-    siteUrl: ``,
+    siteUrl: `http://sameboats.org/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
