@@ -2,7 +2,6 @@ import * as React from "react";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import Prose from "../components/prose";
-import styled from "styled-components";
 
 const IndexPage = () => (
   <Layout>
