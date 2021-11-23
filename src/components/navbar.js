@@ -48,7 +48,7 @@ const Bars = styled(FaBars)`
   padding: 1rem;
   cursor: pointer;
 
-  @media only screen and (max-width: 963px) {
+  @media only screen and (max-width: 960px) {
     display: block;
 `;
 
@@ -58,7 +58,7 @@ const Nav = styled.nav`
   padding: 1rem;
   align-items: center;
 
-  @media only screen and (max-width: 963px) {
+  @media only screen and (max-width: 960px) {
     display: ${({ $nav }) => ($nav ? "block" : "none")};
     background: black;
     flex-flow: column nowrap;
@@ -86,7 +86,7 @@ const NavItemIcon = styled.img`
   padding-right: 0.33rem;
   display: none;
 
-  @media only screen and (max-width: 963px) {
+  @media only screen and (max-width: 960px) {
     padding-right: 1rem;
     display: block;
   }
@@ -95,7 +95,7 @@ const NavItemIcon = styled.img`
 const NavItemText = styled.span`
   color: #000;
 
-  @media only screen and (max-width: 963px) {
+  @media only screen and (max-width: 960px) {
     color: #fff;
   }
 `;

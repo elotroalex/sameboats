@@ -22,6 +22,10 @@ const Container = styled.div`
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
+
+  @media only screen and (max-width: 960px) {
+    flex-flow: column nowrap;
+  }
 `;
 
 const SelectionPanel = styled.div`
@@ -29,6 +33,11 @@ const SelectionPanel = styled.div`
   width: 25%;
   display: flex;
   flex-flow: column nowrap;
+
+  @media only screen and (max-width: 960px) {
+    min-height: 400px;
+    width: 100%;
+  }
 `;
 
 const TrajectoriesMap = styled.div`
@@ -37,6 +46,11 @@ const TrajectoriesMap = styled.div`
   width: 75%;
   display: flex;
   flex-flow: column nowrap;
+
+  @media only screen and (max-width: 960px) {
+    height: 100%;
+    width: 100%;
+  }
 `;
 
 const TimeSpanSelector = styled.div`
