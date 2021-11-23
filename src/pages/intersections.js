@@ -8,11 +8,11 @@ const IntersectionsPage = () => (
     <Seo title="Intersections" />
     <h1>Intersections</h1>
     <Container>
-      <SelectionPanel>
+      <MapSelector>[Map Selector]</MapSelector>
+      <SidePanel>
         <TimeSpanSelector>[Time Span Selector]</TimeSpanSelector>
-        <MapSelector>[Map Selector]</MapSelector>
-      </SelectionPanel>
-      <IntersectionsResults>[Intersections Results]</IntersectionsResults>
+        <IntersectionsResults>[Intersections Results]</IntersectionsResults>
+      </SidePanel>
     </Container>
   </Layout>
 );
@@ -24,15 +24,15 @@ const Container = styled.div`
   flex-flow: row nowrap;
 `;
 
-const SelectionPanel = styled.div`
+const SidePanel = styled.div`
   height: calc(100vh - 4rem);
-  width: 75%;
+  width: 25%;
   display: flex;
   flex-flow: column nowrap;
 `;
 
 const TimeSpanSelector = styled.div`
-  height: 10%;
+  height: 20%;
   background: #aa6c39;
   width: 100%;
   display: flex;
@@ -40,17 +40,16 @@ const TimeSpanSelector = styled.div`
 `;
 
 const MapSelector = styled.div`
-  height: 90%;
+  height: calc(100vh - 4rem);
   background: #aa3939;
-  width: 100%;
+  width: 75%;
   display: flex;
   flex-flow: row nowrap;
 `;
 
 const IntersectionsResults = styled.div`
-  height: calc(100vh - 4rem);
+  height: 80%;
   background: #882d60;
-  width: 25%;
   display: flex;
   flex-flow: column nowrap;
 `;
