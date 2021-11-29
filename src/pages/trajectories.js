@@ -2,20 +2,32 @@ import * as React from "react";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import styled from "styled-components";
+import TimeSelector from "../components/time-selector";
+import PersonSelector from "../components/person-selector";
+import TrajectoriesMap from "../components/trajectories-map";
 
-const TrajectoriesPage = () => (
-  <Layout>
-    <Seo title="Trajectories" />
-    <h1>Trajectories</h1>
-    <Container>
-      <SelectionPanel>
-        <TimeSpanSelector>[Time Span Selector]</TimeSpanSelector>
-        <PersonSelector>[Person Selector]</PersonSelector>
-      </SelectionPanel>
-      <TrajectoriesMap>[Map]</TrajectoriesMap>
-    </Container>
-  </Layout>
-);
+const TrajectoriesPage = () => {
+  // Set a default for the state of false
+  const [bike, flipBike] = React.useState(false);
+  // Create an "event handler" function to capture the event and
+  // THEN flip the variable using the function that flips the variable
+  const handleChange = () => {
+    flipBike(!bike);
+  };
+  return (
+    <Layout>
+      <Seo title="Trajectories" />
+      <h1>Trajectories</h1>
+      <Container>
+        <SelectionPanel>
+          <TimeSelector handleChange={handleChange} bike={bike} />
+          <PersonSelector bike={bike} />
+        </SelectionPanel>
+        <TrajectoriesMap />
+      </Container>
+    </Layout>
+  );
+};
 
 const Container = styled.div`
   height: calc(100vh - 4rem);
@@ -38,35 +50,6 @@ const SelectionPanel = styled.div`
     min-height: 400px;
     width: 100%;
   }
-`;
-
-const TrajectoriesMap = styled.div`
-  height: calc(100vh - 4rem);
-  background: #aa3939;
-  width: 75%;
-  display: flex;
-  flex-flow: column nowrap;
-
-  @media only screen and (max-width: 960px) {
-    height: 100%;
-    width: 100%;
-  }
-`;
-
-const TimeSpanSelector = styled.div`
-  height: 20%;
-  background: #aa6c39;
-  width: 100%;
-  display: flex;
-  flex-flow: column nowrap;
-`;
-
-const PersonSelector = styled.div`
-  height: 80%;
-  background: #882d60;
-  width: 100%;
-  display: flex;
-  flex-flow: column nowrap;
 `;
 
 export default TrajectoriesPage;
