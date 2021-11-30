@@ -1,9 +1,9 @@
 import * as React from "react";
 import styled from "styled-components";
 
-const TimeSelector = ({ handleChange, time }) => {
-  const flipIt = () => {
-    handleChange(!time);
+const TimeSelector = ({ changeTime, time }) => {
+  const handleChange = () => {
+    changeTime(!time);
   };
   return (
     <Container time={time}>
@@ -13,7 +13,7 @@ const TimeSelector = ({ handleChange, time }) => {
           id="vehicle1"
           name="vehicle1"
           value="Bike"
-          onChange={flipIt}
+          onChange={handleChange}
           checked={time}
         ></input>
         <label for="vehicle1"> I have a bike</label>
