@@ -1,12 +1,12 @@
 import * as React from "react";
 import styled from "styled-components";
 
-const TimeSelector = ({ handleChange, bike }) => {
+const TimeSelector = ({ handleChange, time }) => {
   const flipIt = () => {
-    handleChange(!bike);
+    handleChange(!time);
   };
   return (
-    <Container bike={bike}>
+    <Container time={time}>
       <form action="">
         <input
           type="checkbox"
@@ -14,7 +14,7 @@ const TimeSelector = ({ handleChange, bike }) => {
           name="vehicle1"
           value="Bike"
           onChange={flipIt}
-          checked={bike}
+          checked={time}
         ></input>
         <label for="vehicle1"> I have a bike</label>
         <br />

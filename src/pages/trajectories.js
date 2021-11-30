@@ -8,15 +8,15 @@ import TrajectoriesMap from "../components/trajectories-map";
 
 const TrajectoriesPage = () => {
   // Set a default for the state of false
-  const [bike, handleChange] = React.useState(false);
+  const [time, handleChange] = React.useState(false);
   return (
     <Layout>
       <Seo title="Trajectories" />
       <h1>Trajectories</h1>
       <Container>
         <SelectionPanel>
-          <TimeSelector handleChange={handleChange} bike={bike} />
-          <PersonSelector bike={bike} />
+          <TimeSelector handleChange={handleChange} time={time} />
+          <PersonSelector time={time} />
         </SelectionPanel>
         <TrajectoriesMap />
       </Container>
