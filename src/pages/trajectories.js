@@ -5,6 +5,7 @@ import styled from "styled-components";
 import TimeSelector from "../components/time-selector";
 import PersonSelector from "../components/person-selector";
 import TrajectoriesMap from "../components/trajectories-map";
+import VizContainer from "../components/viz-container";
 
 const TrajectoriesPage = () => {
   // Set a default for the state of false
@@ -18,27 +19,16 @@ const TrajectoriesPage = () => {
     <Layout>
       <Seo title="Trajectories" />
       <h1>Trajectories</h1>
-      <Container>
+      <VizContainer>
         <SelectionPanel>
           <TimeSelector handleChange={handleChange} bike={bike} />
           <PersonSelector bike={bike} />
         </SelectionPanel>
         <TrajectoriesMap />
-      </Container>
+      </VizContainer>
     </Layout>
   );
 };
-
-const Container = styled.div`
-  height: calc(100vh - 4rem);
-  width: 100%;
-  display: flex;
-  flex-flow: row nowrap;
-
-  @media only screen and (max-width: 960px) {
-    flex-flow: column nowrap;
-  }
-`;
 
 const SelectionPanel = styled.div`
   height: calc(100vh - 4rem);
