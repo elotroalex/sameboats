@@ -1,7 +1,18 @@
 import * as React from "react";
 import styled from "styled-components";
 
-export default function TimeSelector({ handleChange, bike }) {
+const SetTime = () => {
+  // Set a default for the state of false
+  const [bike, flipBike] = React.useState(false);
+  // Create an "event handler" function to capture the event and
+  // THEN flip the variable using the function that flips the variable
+  const handleChange = () => {
+    flipBike(!bike);
+  };
+  return { bike, handleChange };
+};
+
+const TimeSelector = ({ handleChange, bike }) => {
   return (
     <Container>
       <form action="">
@@ -18,7 +29,7 @@ export default function TimeSelector({ handleChange, bike }) {
       </form>
     </Container>
   );
-}
+};
 
 const Container = styled.div`
   height: 20%;
@@ -27,3 +38,6 @@ const Container = styled.div`
   display: flex;
   flex-flow: column nowrap;
 `;
+
+export default TimeSelector;
+export { SetTime };
