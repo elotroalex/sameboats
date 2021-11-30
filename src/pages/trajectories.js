@@ -5,22 +5,21 @@ import styled from "styled-components";
 import TimeSelector from "../components/time-selector";
 import PersonSelector from "../components/person-selector";
 import TrajectoriesMap from "../components/trajectories-map";
-import VizContainer from "../components/viz-container";
-import { SetTime } from "../components/time-selector";
 
 const TrajectoriesPage = () => {
-  let time = SetTime();
+  // Set a default for the state of false
+  const [bike, handleChange] = React.useState(false);
   return (
     <Layout>
       <Seo title="Trajectories" />
       <h1>Trajectories</h1>
-      <VizContainer>
+      <Container>
         <SelectionPanel>
-          <TimeSelector handleChange={time.handleChange} bike={time.bike} />
-          <PersonSelector bike={time.bike} />
+          <TimeSelector handleChange={handleChange} bike={bike} />
+          <PersonSelector bike={bike} />
         </SelectionPanel>
         <TrajectoriesMap />
-      </VizContainer>
+      </Container>
     </Layout>
   );
 };
@@ -34,6 +33,17 @@ const SelectionPanel = styled.div`
   @media only screen and (max-width: 960px) {
     min-height: 400px;
     width: 100%;
+  }
+`;
+
+const Container = styled.div`
+  height: calc(100vh - 4rem);
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+
+  @media only screen and (max-width: 960px) {
+    flex-flow: column nowrap;
   }
 `;
 

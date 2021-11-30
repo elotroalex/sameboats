@@ -1,27 +1,19 @@
 import * as React from "react";
 import styled from "styled-components";
 
-const SetTime = () => {
-  // Set a default for the state of false
-  const [bike, flipBike] = React.useState(false);
-  // Create an "event handler" function to capture the event and
-  // THEN flip the variable using the function that flips the variable
-  const handleChange = () => {
-    flipBike(!bike);
-  };
-  return { bike, handleChange };
-};
-
 const TimeSelector = ({ handleChange, bike }) => {
+  const flipIt = () => {
+    handleChange(!bike);
+  };
   return (
-    <Container>
+    <Container bike={bike}>
       <form action="">
         <input
           type="checkbox"
           id="vehicle1"
           name="vehicle1"
           value="Bike"
-          onChange={handleChange}
+          onChange={flipIt}
           checked={bike}
         ></input>
         <label for="vehicle1"> I have a bike</label>
@@ -40,4 +32,3 @@ const Container = styled.div`
 `;
 
 export default TimeSelector;
-export { SetTime };
