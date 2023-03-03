@@ -4,7 +4,7 @@ A React rewrite of the [_In The Same Boats_](https://github.com/elotroalex/itsb/
 
 This version of _In The Same Boats_ is built on the [Linked Places](https://github.com/LinkedPasts/linked-places-format) and [Linked Traces](https://github.com/LinkedPasts/linked-traces-format) standards for representing historical and geographical data, and makes use of the [Peripleo](https://github.com/peripleo/peripleo) and [Deck.GL](https://github.com/visgl/deck.gl) libraries for search and interactive visualization.
 
-For more information and credits, visit the current deployment of [_In The Same Boats_](https://performant-software.github.io/itsb/).
+For more information and credits, visit the current deployment of [_In The Same Boats_](http://sameboats.org/).
 
 ## Usage
 
