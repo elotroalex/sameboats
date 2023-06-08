@@ -49,7 +49,7 @@ class bcolors:
 
 palette = []
 n_colors = len(glob.glob1(MOVEMENTS_CSV_LOCATION, "*.csv"))
-seaborn_palettes = ["bright", "dark"]
+seaborn_palettes = ["deep", "muted"]
 for i in range(0, ceil(n_colors / 10)):  # each seaborn palette has ~10 colors
     for (r, g, b) in color_palette(palette=seaborn_palettes[i], n_colors=10):
         palette.append([int(r * 255), int(g * 255), int(b * 255), 195])
