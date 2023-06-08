@@ -1,0 +1,19 @@
+desc 'Publishing the website via rsync and testing'
+
+require 'colorize'
+require 'html-proofer'
+
+task :prod do
+  puts 'First, let\'s build your site...'.green
+  sh "npm run build"
+  puts "\n"
+  puts 'Let\'s publish your site, hold on a sec...'.green
+# personal server setup
+  user = 'caribbea'
+  server = 'caribbeandigitalnyc.net'
+  path = '/home/caribbea/sameboats.org/'
+  sh "rsync -r -e \"ssh -p22\" dist/. #{user}@#{server}:#{path}"
+  puts "\n"
+  puts 'Bam! Your website is now published!'.green
+  puts "\n"
+end

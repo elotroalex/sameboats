@@ -1,0 +1,37 @@
+aside#map-control {
+  padding: 10px 0 0;
+  background-color: var(--sidebar-bg);
+}
+
+main#map {
+  position: relative;
+  flex-grow: 1;
+
+  /** mobile only **/
+  margin-bottom: 22vh;
+}
+
+.deck-tooltip {
+  font-size: 0.8rem;
+  max-width: 450px;
+}
+.deck-tooltip h2 {
+  font-size: 0.8rem;
+  margin: 0;
+}
+.deck-tooltip ul {
+  margin: 0;
+  padding: 0 0 0 1rem;
+}
+
+/* medium-sized displays and larger */
+@media (min-width: 640px) {
+  main#map {
+    margin-bottom: 0;
+  }
+
+  aside#map-control {
+    flex: 0 0 330px;
+    padding: 20px 10px;
+  }
+}
