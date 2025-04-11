@@ -12,7 +12,7 @@ export function CreditsPage() {
       <article>
         <h1>Credits</h1>
         <section>
-          <h2>Project Wranglers</h2>
+          <h2>Project Directors</h2>
           <dl>
             <dt>Kaiama L. Glover</dt>
             <dd>Barnard College, Columbia University</dd>
